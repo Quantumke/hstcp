@@ -547,7 +547,8 @@
                 </p>
 
                 <div class="formlarge col s12 m12 l12">
-                    <form action="" name="">
+                    <form action="/contact/" name="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
             <div class="input-text-small col s12 m12 l4">
                 <input type="text" class="text-small col s12 m12 l11" placeholder="Name" name="name" id="name" autocomplete="off" >
                 </div>
@@ -558,7 +559,7 @@
                 <input type="text" class="text-small col s12 m11 l11" placeholder="Phone" name="phone" autocomplete="off" >
                 </div>
                     <div class="input-textarea-large col s12 m12 l12">
-                    <textarea class="text-large col s12 m12 l12">Message</textarea>
+                    <textarea class="text-large col s12 m12 l12" name="message">Message</textarea>
                     </div>
                     <div class="submit-button-area col s5 m5 l5">
                     <input type="submit" name="submit" class="submit-feedback-button">
