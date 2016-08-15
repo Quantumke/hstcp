@@ -10,3 +10,14 @@ class contactus(models.Model):
 
     def __unicode__(self):
         return  self.name
+
+class prospects(models.Model):
+    name=models.CharField(max_length=100, unique=False)
+    email=models.CharField(max_length=100, unique=False)
+    phone=models.CharField(max_length=100, unique=False)
+    package=models.CharField(max_length=100, unique=False)
+    description=models.CharField(max_length=100, unique=False)
+
+    def __unicode__(self):
+        return self.name
+
